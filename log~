@@ -1,0 +1,30 @@
+1) my-first-app$ npm install --save bootstrap
+
+In ".angular-cli.json":
+"styles": [	
+   "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+   "styles.css"
+],
+
+
+2) 
+"app.component.ts":
+
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  title = 'Something NEW';
+}
+
+What is inside '@Component' replaces "<app-root></app-root>" in index.html with "app.component.html"
+
+main.ts -> app.module.ts -> app.component.html
+
+Other modules will be added to the "app.component.html", not to "index.html"
+
+
